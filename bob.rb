@@ -1,18 +1,24 @@
 class Bob
+  def hey(statement)
+    if statement.strip.empty?
+      "Fine. Be that way!"
+    elsif statement.upcase == statement && statement.downcase != statement
+      "Woah, chill out!"
+    elsif statement.end_with?("?")
+      "Sure."
+    else
+      "Whatever."
+    end
+  end
 end
 
-attr_accessor(hey)
 
-def initialize
-  self.hey
+#attr_accessor(hey)
+#end
 
-  def hey
-  end
 
 require 'minitest/autorun'
 require_relative 'bob'
-
-end
 
 
 class BobTest < Minitest::Test
